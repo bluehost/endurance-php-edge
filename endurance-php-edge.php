@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Endurance PHP Edge
-Description: Run the latest stable version of PHP available on .
+Description: Run the latest stable version of PHP available.
 Version: 0.1
 Author: Mike Hansen
 Author URI: https://www.mikehansen.me/
