@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Endurance PHP Edge
-Description: Run the latest stable version of PHP available.
+Description: Run the latest version of PHP available or select your version using the MOJO Marketplace Plugin.
 Version: 0.1
 Author: Mike Hansen
 Author URI: https://www.mikehansen.me/
