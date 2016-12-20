@@ -25,7 +25,8 @@ if ( ! class_exists( 'Endurance_PHP_Edge' ) ) {
 		}
 
 		function htaccess_contents( $rules ) {
-			$handler = 'AddHandler application/x-httpd-php-edge .php' . "\n";
+			$handler = get_option( 'epe_php_handler', 'application/eig-wp-edge' );
+			$handler = 'AddHandler ' . $handler . ' .php' . "\n";
 			return $handler . $rules;
 		}
 	}
