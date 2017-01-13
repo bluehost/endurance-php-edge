@@ -21,7 +21,7 @@ if ( ! class_exists( 'Endurance_PHP_Edge' ) ) {
 		}
 
 		function hooks() {
-			add_filter( 'mod_rewrite_rules', array( $this, 'htaccess_contents' ) );
+			add_filter( 'mod_rewrite_rules', array( $this, 'htaccess_contents' ), 6 );
 		}
 
 		function htaccess_contents( $rules ) {
