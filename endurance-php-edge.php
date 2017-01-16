@@ -17,7 +17,7 @@ define( 'EPE_VERSION', 0.1 );
 if ( ! class_exists( 'Endurance_PHP_Edge' ) ) {
 	class Endurance_PHP_Edge {
 		function __construct() {
-			$this->hooks();
+			add_action( 'init', array( $this, 'hooks' ) );
 		}
 
 		function hooks() {
