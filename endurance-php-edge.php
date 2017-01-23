@@ -17,11 +17,11 @@ define( 'EPE_VERSION', 0.1 );
 if ( ! class_exists( 'Endurance_PHP_Edge' ) ) {
 	class Endurance_PHP_Edge {
 		function __construct() {
-			add_action( 'init', array( $this, 'hooks' ) );
+			$this->hooks();
 		}
 
 		function hooks() {
-			add_filter( 'mod_rewrite_rules', array( $this, 'htaccess_contents' ), 6 );
+			add_filter( 'mod_rewrite_rules', array( $this, 'htaccess_contents' ), 1 );
 		}
 
 		function htaccess_contents( $rules ) {
