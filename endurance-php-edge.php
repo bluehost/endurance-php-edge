@@ -25,7 +25,7 @@ if ( ! class_exists( 'Endurance_PHP_Edge' ) ) {
 		}
 
 		function htaccess_contents( $rules ) {
-			$handler = get_option( 'epe_php_handler', 'application/x-httpd-php70s' );
+			$handler = get_option( 'epe_php_handler', 'application/x-httpd-php70' );
 			$handler = 'AddHandler ' . $handler . ' .php' . "\n";
 			return $handler . $rules;
 		}
