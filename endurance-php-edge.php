@@ -25,7 +25,13 @@ if ( ! class_exists( 'Endurance_PHP_Edge' ) ) {
 		}
 
 		function htaccess_contents( $rules ) {
-			$handler = get_option( 'epe_php_handler', 'application/x-httpd-php70' );
+			if ( file_exists( '/opt/cpanel/ea-php70/root/usr/bin/php-cgi' ) ) {
+				$default_handler = 'application/x-httpd-ea-php7';
+			} else {
+				$default_handler = 'application/x-httpd-php7';
+			}
+
+			$handler = get_option( 'epe_php_handler', $default_handler );
 			$handler = 'AddHandler ' . $handler . ' .php' . "\n";
 			return $handler . $rules;
 		}
