@@ -26,7 +26,7 @@ if ( ! class_exists( 'Endurance_PHP_Edge' ) ) {
 
 		function htaccess_contents( $rules ) {
 			if ( file_exists( '/opt/cpanel/ea-php70/root/usr/bin/php-cgi' ) ) {
-				$default_handler = 'application/x-httpd-ea-php7';
+				$default_handler = 'application/x-httpd-ea-php70';
 			} else {
 				$default_handler = 'application/x-httpd-php70';
 			}
